@@ -134,6 +134,18 @@ DefaultHashMapSize=<%= node[:ndb][:DefaultHashMapSize] %>
 # Needs root privileges
 ODirect=<%= node[:ndb][:ODirect] %>
 
+#The number of transaction records available at each data node. Increase this if you have a higher number of concurrent transactions
+MaxNoOfConcurrentTransactions=<%= node[:ndb][:MaxNoOfConcurrentTransactions] %>
+
+#The number of operation records available at each data node. Increase this if you have a higher number of concurrent operations
+MaxNoOfConcurrentOperations=<%= node[:ndb][:MaxNoOfConcurrentOperations] %>
+
+#The number of operation records available at each data node for queries that use a hash index. Increase this if you have a higher number of concurrent operations
+MaxNoOfConcurrentIndexOperations=<%= node[:ndb][:MaxNoOfConcurrentIndexOperations] %>
+
+# Max number of parallel scans. Max value is 500.
+MaxNoOfConcurrentScans=<%= node[:ndb][:MaxNoOfConcurrentScans] %>
+
 [MYSQLD DEFAULT]
 
 [NDB_MGMD DEFAULT]

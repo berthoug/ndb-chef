@@ -10,6 +10,7 @@ version          "1.0"
 
 depends           "kagent"
 depends           "btsync"
+depends           "java"
 
 recipe            "ndb::install", "Installs MySQL Cluster binaries"
 

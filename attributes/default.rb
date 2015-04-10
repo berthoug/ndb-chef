@@ -95,6 +95,21 @@ default[:ndb][:num_ndb_slots_per_client]            = 1
 # Time in seconds
 default[:ndb][:wait_startup]       = 300
 
+#The number of transaction records available at each data node. Increase this if you have a higher number of concurrent transactions
+default[:ndb][:MaxNoOfConcurrentTransactions]      ="100000"
+
+#The number of operation records available at each data node. Increase this if you have a higher number of concurrent operations
+default[:ndb][:MaxNoOfConcurrentOperations]        ="1000000"
+
+#The number of operation records available at each data node for queries that use a hash index. Increase this if you have a higher number of concurrent operations
+default[:ndb][:MaxNoOfConcurrentIndexOperations]   ="32768"
+
+# Max number of parallel scans. Max value is 500.
+default[:ndb][:MaxNoOfConcurrentScans]             ="500"
+
+
+
+
 # Base directory for MySQL binaries
 default[:mysql][:root_dir]         = "/usr/local"
 # Symbolic link to the current versioned mysql directory

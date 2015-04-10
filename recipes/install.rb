@@ -1,3 +1,6 @@
+node.default['java']['jdk_version'] = 7
+include_recipe "java"
+include_recipe 'build-essential::default'
 
 group node[:ndb][:group] do
   action :create
