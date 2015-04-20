@@ -28,7 +28,7 @@ recipe            "ndb::btsync", "Installs MySQL Cluster binaries with BitTorren
 
 recipe            "ndb::purge", "Removes all data and all binaries related to a MySQL Cluster installation"
 
-
+recipe            "ndb::mini", "install only java and g++"
 
 supports 'ubuntu', ">= 12.04"
 supports 'rhel',   ">= 6.3"
