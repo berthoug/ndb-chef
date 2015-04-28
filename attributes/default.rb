@@ -3,7 +3,7 @@ include_attribute "btsync"
 
 version="7"
 majorVersion="4"
-minorVersion="4"
+minorVersion="6"
 
 versionStr                                          = "#{version}.#{majorVersion}.#{minorVersion}"
 default[:ndb][:enabled]                             = "true"
@@ -25,7 +25,7 @@ default[:ndb][:user]                                = "root"
 default[:ndb][:group]                               = "root"
 default[:ndb][:connectstring]                       = ""
 
-default[:ndb][:DataMemory]                          = "80"
+default[:ndb][:DataMemory]                          = "1000"
 # Calculate IndexMemory size by default, can be overriden by user.
 default[:ndb][:IndexMemory]                         = ""
 default[:ndb][:NoOfReplicas]                        = "1"
